@@ -3,33 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MyWeather | Maps</title>
     <link rel="stylesheet" href="maps.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 </head>
 <body>
     <div class="map-card">
+
         <div class="map-header">
+
             <div class="logo">
                 <i class="fa-solid fa-cloud-sun"></i>
                 MyWeather
             </div>
-            </div>
+
             <div class="map-controls">
-                <button class="map-btn active"><i class="fa-solid fa-temperature-high"></i> <br>Temperature</button>
-                <button class="map-btn"><i class="fa-solid fa-cloud-rain"></i> <br>Rain</button>
-                <button class="map-btn"><i class="fa-solid fa-wind"></i> <br>Wind</button>
-                <button class="map-btn"><i class="fa-solid fa-cloud"></i> <br>Clouds</button>
+                <button class="map-btn active">
+                    <i class="fa-solid fa-temperature-high"></i><br>Temperature
+                </button>
+
+                <button class="map-btn">
+                    <i class="fa-solid fa-cloud-rain"></i><br>Rain
+                </button>
+
+                <button class="map-btn">
+                    <i class="fa-solid fa-wind"></i><br>Wind
+                </button>
+
+                <button class="map-btn">
+                    <i class="fa-solid fa-cloud"></i><br>Clouds
+                </button>
             </div>
+
         </div>
-<br>
+
         <div class="map-container">
             <iframe
                 src="https://embed.windy.com/embed2.html?lat=50.45&lon=30.52&zoom=6&level=surface&overlay=temp"
                 frameborder="0">
             </iframe>
         </div>
+
     </div>
 </body>
 <script src="maps.js" defer></script>

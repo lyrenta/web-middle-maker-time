@@ -10,10 +10,12 @@ body {
     overflow-x: hidden;
     color: white;
     background: #0b1020;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+
+    padding: 20px;
 }
 
 body::before {
@@ -42,8 +44,12 @@ body::after {
 }
 
 .map-card {
-    width: 50%;
+    width: 90%;
     max-width: 1200px;
+    height: 90vh;
+
+    display: flex;
+    flex-direction: column;
 
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.12);
@@ -52,18 +58,21 @@ body::after {
     -webkit-backdrop-filter: blur(20px);
 
     border-radius: 25px;
-    padding: 30px;
+
+    overflow: hidden;
 
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
 .map-header {
+    flex: 0 0 auto;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 25px;
-    flex-wrap: wrap;
-    gap: 20px;
+
+    padding: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .logo {
@@ -90,7 +99,6 @@ body::after {
     cursor: pointer;
 
     border: 1px solid rgba(255,255,255,0.08);
-
     background: rgba(255,255,255,0.06);
     color: white;
 
@@ -110,15 +118,8 @@ body::after {
 }
 
 .map-container {
-    width: 75%;
-    height: 650px;
-
-    overflow: hidden;
-    border-radius: 20px;
-
-    border: 1px solid rgba(255,255,255,0.08);
-
-    box-shadow: 0 10px 40px rgba(0,0,0,.25);
+    flex: 1;
+    width: 100%;
 }
 
 .map-container iframe {
@@ -128,31 +129,23 @@ body::after {
 }
 
 @keyframes float {
-    0%,100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(30px);
-    }
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(30px); }
 }
 
 @media (max-width: 768px) {
-
     body {
-        padding: 20px;
+        padding: 10px;
+        align-items: stretch;
     }
 
     .map-card {
-        padding: 20px;
-    }
-
-    .map-container {
-        height: 500px;
+        height: 95vh;
     }
 
     .map-header {
         flex-direction: column;
+        gap: 10px;
         align-items: flex-start;
     }
 }

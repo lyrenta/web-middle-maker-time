@@ -14,7 +14,6 @@ async function getWeather(city) {
 
         const data = await response.json();
 
-        // Weather information
         document.querySelector(".city-name").textContent =
             `${data.location.name}, ${data.location.country}`;
 
