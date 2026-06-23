@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="daily.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+    <div class="map-card">
+
+        <div class="map-header">
+
+            <div class="logo">
+                <i class="fa-solid fa-cloud-sun"></i>
+                MyWeather
+            </div>
+
+            <div class="search">
+                <input type="text" class="city" placeholder="Search city...">
+                <button class="search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <div class="card-daily">
+                <button class="day1-btn">
+                    <i class="fa-solid fa-calendar-days"></i><br>1 Day
+                </button>
+
+                <button class="days3-btn">
+                    <i class="fa-solid fa-calendar-days"></i><br>3 Days
+                </button>
+
+                <button class="days7-btn">
+                    <i class="fa-solid fa-calendar-days"></i><br>7 Days
+                </button>
+
+                <button class="days10-btn">
+                    <i class="fa-solid fa-calendar-days"></i><br>10 Days
+                </button>
+            </div>
+        </div>
+
+        <div class="weather-card">
+
+    <div class="top-section">
+      <h1 class="city-name">Kyiv, Ukraine</h1>
+      <p id="date"></p>
+    </div>
+
+    <div class="weather-main">
+
+    <div class="day-card">
+        <h2><i class="fa-solid fa-sun"></i> Day</h2>
+        <img class="day-icon" src="" alt="">
+        <h1 class="day-temp">--°C</h1>
+    </div>
+
+    <div class="night-card">
+        <h2><i class="fa-solid fa-moon"></i> Night</h2>
+        <img class="night-icon" src="" alt="">
+        <h1 class="night-temp">--°C</h1>
+    </div>
+
+</div>
+
+    <h3 class="description">Loading...</h3>
+
+    <div class="weather-details">
+
+      <div class="detail">
+        <i class="fa-solid fa-wind"></i>
+        <span>
+          Wind:
+          <span class="wind">--</span> km/h
+        </span>
+      </div>
+
+      <div class="detail">
+        <i class="fa-solid fa-temperature-high"></i>
+        <span>
+          Temperature:
+          <span class="temperature">--</span>°C
+        </span>
+      </div>
+
+      <div class="detail">
+        <i class="fa-solid fa-droplet"></i>
+        <span>
+          Humidity:
+          <span class="humidity">--</span>%
+        </span>
+      </div>
+
+      <div class="detail">
+        <i class="fa-solid fa-cloud-rain"></i>
+        <span>
+          Precipitation:
+          <span class="precipitation">--</span>%
+        </span>
+      </div>
+    </div>
+    </div>
+</body>
+<script src="daily.js" defer></script>
+</html>
