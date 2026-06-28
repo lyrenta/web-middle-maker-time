@@ -2,6 +2,22 @@ const apiKey = "5079ed96da8c4ffa82b135051260706";
 const cityInput = document.querySelector(".city");
 const searchBtn = document.querySelector(".search-btn");
 
+const jumpscareOverlay = document.getElementById("jumpscareOverlay");
+const jumpscareSound = document.getElementById("jumpscareSound");
+
+function playJumpscare() {
+    jumpscareOverlay.classList.add("show");
+
+    jumpscareSound.currentTime = 0;
+    jumpscareSound.play().catch(() => {});
+
+    setTimeout(() => {
+        jumpscareOverlay.classList.remove("show");
+        jumpscareSound.pause();
+        jumpscareSound.currentTime = 0;
+    }, 2000);
+}
+
 async function getWeather(city) {
     try {
         const response = await fetch(
@@ -117,19 +133,31 @@ async function getWeather(city) {
 searchBtn.addEventListener("click", () => {
     const city = cityInput.value.trim();
 
-    if (city !== "") {
-        getWeather(city);
+    if (city === "") return;
+
+    if (city.toLowerCase() === "jumpscare") {
+        playJumpscare();
+        cityInput.value = "";
+        return;
     }
+
+    getWeather(city);
 });
 
 cityInput.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
-        const city = cityInput.value.trim();
+    if (event.key !== "Enter") return;
 
-        if (city !== "") {
-            getWeather(city);
-        }
+    const city = cityInput.value.trim();
+
+    if (city === "") return;
+
+    if (city.toLowerCase() === "jumpscare") {
+        playJumpscare();
+        cityInput.value = "";
+        return;
     }
+
+    getWeather(city);
 });
 
 getWeather("Kyiv");

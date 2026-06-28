@@ -191,3 +191,30 @@ main {
   0% { transform: translateX(0); }
   100% { transform: translateX(200vw); }
 }
+
+#jumpscareOverlay{
+    position: fixed;
+    inset: 0;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .15s ease;
+}
+
+#jumpscareOverlay.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+#jumpscareImage{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    user-select: none;
+    pointer-events: none;
+}
